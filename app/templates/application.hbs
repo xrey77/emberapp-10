@@ -1,0 +1,140 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">EMBERJS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/aboutus">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/aboutus">Services</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/aboutus">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#loginBackdrop">LogIn</a>
+            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#registerBackdrop">Register</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+  <div>
+    <!--LOGIN--> 
+    <div class="modal fade" id="loginBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loginBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginBackdropLabel">Account Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                    <label for="usrname" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="usrname" require>
+                  </div>
+                  <div class="mb-3">
+                    <label for="pwd" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="pwd" required>
+                  </div>                            
+                  <button type="submit" class="btn btn-primary">login</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+                <div id="loginMsg" class="w-100 text-left text-danger fsize-12">Under Construction</div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!--REGISTER-->
+    <div class="modal fade" id="registerBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="registerBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="registerBackdropLabel">Account Registration</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row">
+                   <div class="col">
+                    <div class="mb-3">
+                      <label for="fname" class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="fname" require>
+                    </div>  
+                   </div>
+                   <div class="col">
+                    <div class="mb-3">
+                      <label for="lname" class="form-label">Last Name</label>
+                      <input type="text" class="form-control" id="lname" require>
+                    </div>
+  
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div class="mb-3">
+                      <label for="emailadd" class="form-label">Email Address</label>
+                      <input type="email" class="form-control" id="emailadd" require>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mb-3">
+                      <label for="mobileno" class="form-label">Mobile No.</label>
+                      <input type="text" class="form-control" id="mobileno" require>
+                    </div>
+  
+                 </div>
+               </div>
+
+               <div class="row">
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="usrname" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="usrname" require>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="pwd" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="pwd" required>
+                  </div>                            
+               </div>
+             </div>
+                  <button type="submit" class="btn btn-primary">register</button>
+
+              </form>
+            </div>
+            <div class="modal-footer">
+                <div id="registerMsg" class="w-100 text-left text-danger fsize-12">Under Construction</div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+    
+  {{outlet}}
